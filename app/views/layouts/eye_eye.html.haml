@@ -1,0 +1,11 @@
+!!!
+%html{html_attrs}
+  %head
+    %meta{"http-equiv"=>"Content-type", :content=>"text/html; charset=utf-8"}/
+    %title Image Browser
+    - @stylesheets.uniq.each do |stylesheet|
+      = stylesheet_link_tag stylesheet
+  %body
+    = yield
+    - @javascripts.uniq.each do |javascript|
+      = javascript_include_tag javascript

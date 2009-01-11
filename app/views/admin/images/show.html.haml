@@ -1,0 +1,14 @@
+%form{:method => "get"}
+  %label{:for => "title"} Search:
+  = text_field_tag :title, params[:title]
+  %input{:type => "submit", :value => "Go"}
+
+%ul#image_list
+  - @assets.each do |asset|
+    %li
+      = link_to image_tag(asset.thumbnail(:thumbnail)), asset.asset.url
+      %span= link_to truncate(asset.title, 16), asset.asset.url
+
+.pages= will_paginate @assets
+
+%span.clearer

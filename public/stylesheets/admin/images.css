@@ -1,0 +1,86 @@
+html body {
+  margin: 0;
+  padding: 0;
+  background: none;
+  background-color: #fff;
+  text-align: center;
+}
+
+ul#image_list {
+  margin: 0;
+  padding: 0;
+}
+
+ul#image_list li {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul#image_list li:hover {
+  background-color: #ccc;
+}
+
+ul#image_list li a {
+  display: block;
+  width: 102px;
+  height: 102px;
+  text-align: center;
+  margin: 1em 1em 0 1em;
+}
+
+ul#image_list img {
+  margin: 0;
+  border: 1px solid #666;
+}
+
+ul#image_list span {
+  display: block;
+  text-align: center;
+}
+
+ul#image_list span a {
+  color: #666;
+  line-height: 1.5;
+  width: auto;
+  height: auto;
+  padding: 0.5em 0;
+  margin: 0;
+  border-bottom: 1px double #999;
+  overflow: hidden;
+}
+
+form {
+  display: block;
+  background-color: #999;
+  padding: 0.2em 0.5em;
+  margin: 0;
+}
+
+label {
+  font-size: 0.8em;
+}
+
+.pages {
+  clear: both;
+  text-align: center;
+  line-height: 1.5;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1.5em;
+  background-color: #fff;
+}
+
+.pagination span,
+.pagination a {
+  font-size: 1em;
+  margin: 0.5em;
+}
+
+.clearer {
+  display: block;
+  clear: both;
+}
