@@ -1,5 +1,6 @@
 class Admin::TinyMceController < ApplicationController
   layout "eye_eye"
+  helper :tiny_mce
   
   before_filter :add_javascripts_and_stylesheets
   
@@ -27,7 +28,7 @@ class Admin::TinyMceController < ApplicationController
     
     conditions = nil
     unless params[:title].blank?
-      conditions = [" AND title LIKE ?", "%#{params[:title]}%"]
+      conditions = ["title LIKE ?", "%#{params[:title]}%"]
     end
     
     @assets = Asset.paginate(
@@ -35,6 +36,11 @@ class Admin::TinyMceController < ApplicationController
       :per_page   => 12,
       :conditions => conditions,
       :order      => "title ASC"
+    )
+    
+    @home_page = Page.find(:first,
+      :conditions => {:parent_id => nil},
+      :include    => :children
     )
   end
   
