@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
 assetMethods = {
   browserHook: function(field_name, url, type, win) {
     tinyMCE.activeEditor.windowManager.open({
-      file:           "/admin/images",
+      file:           "/admin/tiny_mce/" + type + "s",
       title:          "Image Browser",
       width:          520,
       height:         464,

@@ -1,18 +1,21 @@
 h1. Paperclipped TinyMCE
 
+*Warning: Not Yet Ready for Production*
+
 TinyMCE is a very useful rich text editor, and there are other extensions out there for Radiant that plug it in. This one is different because it talks to the "Paperclipped":http://github.com/kbingman/paperclipped extension to get assets for inserting as images or links within TinyMCE.
 
 This means your users don't need to know about URLs for specific images or files, they can just use the helpers TinyMCE supplies.
 
-Once you've got it installed, don't forget to run the following rake tasks:
+Keep in mind though, that this is a very opinionated extension. I've written it to suit my needs for a few similar sites I need to deploy, and so it may not do exactly what you want the way you want it. That said, if you think it might be useful, give it a shot.
 
-<pre><code>  rake db:migrate:extensions
-  rake radiant:extensions:tiny_mce_:update</code></pre>
+Once you've got it installed, don't forget to run the following rake task:
+
+<pre><code>  rake radiant:extensions:tiny_mce:update</code></pre>
 
 You still need to install the "Paperclipped":http://github.com/kbingman/paperclipped extension, too.
 
 h2. Who's Responsible
 
-Pat Allan wrote this extension. Yes, he could have created something that just used one of the existing TinyMCE plugins as well as Paperclipped, but they didn't use "jQuery":http://www.jquery.com/, and Prototype has started to bug him. Sometimes he's overly fussy like that.
+"Pat Allan":http://freelancing-gods.com wrote this extension. Yes, he could have created something that just used one of the existing TinyMCE plugins as well as Paperclipped, but they didn't use "jQuery":http://www.jquery.com/, and Prototype has started to bug him. Sometimes he's overly fussy like that.
 
 If you have questions, comments, suggestions, criticisms and/or patches, you can either email pat at freelancing-gods dot com, hassle him on "Twitter":http://twitter.com/pat, or send a message via "GitHub":http://github.com/freelancing-god.
