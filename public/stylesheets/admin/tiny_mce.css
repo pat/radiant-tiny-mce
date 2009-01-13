@@ -55,7 +55,12 @@ table#file_list tbody tr {
   height: 44px;
 }
 
+table#file_list tbody td {
+  padding: 0 0.5em;
+}
+
 table#file_list tbody td.img {
+  padding-left: 0.5em;
   vertical-align: middle;
   text-align: center;
 }

@@ -16,7 +16,7 @@ assetMethods = {
   browserHook: function(field_name, url, type, win) {
     tinyMCE.activeEditor.windowManager.open({
       file:           "/admin/tiny_mce/" + type + "s",
-      title:          "Image Browser",
+      title:          (type == "image" ? "Image" : "File") + " Browser",
       width:          520,
       height:         (type == "image" ? 464 : 458),
       resizable:      "yes",
@@ -26,5 +26,6 @@ assetMethods = {
       window: win,
       input:  field_name
     });
+    return false;
   }
 }
