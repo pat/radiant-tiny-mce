@@ -2,7 +2,7 @@
   %h3 Link to a Page:
   %select{:size => 5}
     = ordered_list(@home_page)
-  %input{:type => "submit", :value => "Choose Page"}
+  %input#choose_page{:type => "submit", :value => "Choose Page"}
 
 %div
   %h3 Link to a File:
@@ -20,7 +20,7 @@
     %tbody
       - @assets.each do |asset|
         %tr
-          %td= link_to image_tag(asset.thumbnail(:icon)), asset.asset.url
+          %td.img= link_to image_tag(asset.thumbnail(:icon)), asset.asset.url
           %td= link_to asset.title, asset.asset.url
           %td= asset.asset_content_type
 

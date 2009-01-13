@@ -18,7 +18,7 @@ assetMethods = {
       file:           "/admin/tiny_mce/" + type + "s",
       title:          "Image Browser",
       width:          520,
-      height:         464,
+      height:         (type == "image" ? 464 : 458),
       resizable:      "yes",
       inline:         "yes",
       close_previous: "no"

@@ -51,6 +51,25 @@ ul#image_list span a {
   overflow: hidden;
 }
 
+table#file_list tbody tr {
+  height: 44px;
+}
+
+table#file_list tbody td.img {
+  vertical-align: middle;
+  text-align: center;
+}
+
+div h3 {
+  text-align: left;
+  margin-left: 0.5em;
+}
+
+select {
+  width: 100%;
+  display: block;
+}
+
 form {
   display: block;
   background-color: #999;

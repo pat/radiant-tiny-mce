@@ -1,6 +1,6 @@
 module TinyMceHelper
   def ordered_list(page)
-    content_tag(:option, spaced_title(page)) +
+    content_tag(:option, spaced_title(page), :value => page.url) +
     page.children.collect { |child| ordered_list(child) }.join("\n")
   end
   

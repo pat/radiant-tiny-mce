@@ -33,7 +33,7 @@ class Admin::TinyMceController < ApplicationController
     
     @assets = Asset.paginate(
       :page       => params[:page] || 1,
-      :per_page   => 12,
+      :per_page   => 6,
       :conditions => conditions,
       :order      => "title ASC"
     )
