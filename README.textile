@@ -1,6 +1,6 @@
 h1. Paperclipped TinyMCE
 
-*Warning: Not Yet Ready for Production*
+*Warning: Consider this a Beta*
 
 TinyMCE is a very useful rich text editor, and there are other extensions out there for Radiant that plug it in. This one is different because it talks to the "Paperclipped":http://github.com/kbingman/paperclipped extension to get assets for inserting as images or links within TinyMCE.
 
