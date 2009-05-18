@@ -1,6 +1,14 @@
 $j = jQuery.noConflict();
 
-jQuery(document).ready(function() {
+TabControl.addMethods({
+  actualSelect: TabControl.prototype['select'],
+  select: function(tab) {
+    this.actualSelect(tab);
+    tinyMCESetup();
+  }
+});
+
+function tinyMCESetup() {
   jQuery("#tab-control .page .part p").hide();
   jQuery("#tab-control .page .part p select").val("TinyMce");
   jQuery("#tab-control .page .part textarea").each(function() {
@@ -10,7 +18,9 @@ jQuery(document).ready(function() {
     tinyMCE.execCommand('mceAddControl', false, this.id);
   });
   jQuery("#show-bucket").hide();
-});
+}
+
+jQuery(document).ready(tinyMCESetup);
 
 assetMethods = {
   browserHook: function(field_name, url, type, win) {
